@@ -38,12 +38,14 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="F:\Softwarecollection\Git\bin\git.exe" />
+    <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/UserMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinContentMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/PostMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinTypeMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -59,6 +61,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1UPtnT5EdQT29VXmtnrow7xbaN6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -86,7 +89,7 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -206,12 +209,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试添加公告类型" />
     <option name="LAST_COMMIT_MESSAGE" value="测试添加公告类型" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="313" y="0" width="753" height="728" key="#RuoYiApplication_(1)" timestamp="1607936790822">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="313" y="0" width="753" height="728" key="#RuoYiApplication_(1)/0.0.1366.728@0.0.1366.728" timestamp="1607936790822" />
     <state x="872" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607738506004">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
@@ -234,9 +242,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1077" y="299" key="ExperimentsDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1607686211771" />
-    <state x="915" y="215" key="FileChooserDialogImpl" timestamp="1607932963481">
-      <screen x="0" y="0" width="2560" height="1050" />
+    <state x="488" y="149" key="FileChooserDialogImpl" timestamp="1607936835387">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="488" y="149" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607936835387" />
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600072961661" />
     <state x="915" y="215" key="FileChooserDialogImpl/0.0.2560.1050@0.0.2560.1050" timestamp="1607932963481" />
     <state width="2507" height="185" key="GridCell.Tab.0.bottom" timestamp="1607932897373">
@@ -311,9 +320,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="795" y="289" key="Registry/0.0.2560.1050@0.0.2560.1050" timestamp="1607686214671" />
-    <state x="450" y="77" key="SettingsEditor" timestamp="1607932576416">
-      <screen x="0" y="0" width="2560" height="1050" />
+    <state x="240" y="16" key="SettingsEditor" timestamp="1607936836782">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="240" y="16" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607936836782" />
     <state x="270" y="61" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600072964249" />
     <state x="450" y="77" key="SettingsEditor/0.0.2560.1050@0.0.2560.1050" timestamp="1607932576416" />
     <state x="1081" y="404" key="UiDebugger" timestamp="1607686207387">
@@ -340,6 +350,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="909" y="43" width="742" height="963" key="find.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607741444122" />
+    <state x="390" y="150" key="git4idea.merge.GitPullDialog" timestamp="1607936775150">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="150" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1607936775150" />
     <state x="401" y="77" key="new project wizard" timestamp="1600673268615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
