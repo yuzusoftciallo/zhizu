@@ -44,7 +44,7 @@ public class LoginController extends BaseController
         try
         {
             subject.login(token);
-            return success();
+            return success();  //{"code":0,"msg":"登录成功"}
         }
         catch (AuthenticationException e)
         {

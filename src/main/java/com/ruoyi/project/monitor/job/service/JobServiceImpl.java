@@ -7,6 +7,7 @@ import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.ruoyi.common.constant.ScheduleConstants;
@@ -25,6 +26,7 @@ import com.ruoyi.project.monitor.job.util.ScheduleUtils;
 @Service
 public class JobServiceImpl implements IJobService
 {
+
     @Autowired
     private Scheduler scheduler;
 

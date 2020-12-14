@@ -25,6 +25,7 @@ public class DictService
      */
     public List<DictData> getType(String dictType)
     {
+        System.out.println(dictType);
         return dictDataService.selectDictDataByType(dictType);
     }
 

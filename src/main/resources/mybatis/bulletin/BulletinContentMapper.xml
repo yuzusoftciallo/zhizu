@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.bulletin.content.mapper.BulletinContentMapper">
+
+    <resultMap type="com.ruoyi.project.bulletin.content.domain.BulletinContent" id="BulletinContentResult">
+        <result property="contentId" column="content_id"/>
+        <result property="typeId" column="type_id"/>
+        <result property="contentTitle" column="content_title"/>
+        <result property="contentText" column="content_text"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <resultMap type="com.ruoyi.project.bulletin.content.domain.VO.BulletinContentVO" id="BulletinContentVOResult">
+        <result property="contentId" column="content_id"/>
+        <result property="typeId" column="type_id"/>
+        <result property="contentTitle" column="content_title"/>
+        <result property="contentText" column="content_text"/>
+        <result property="typeName" column="type_name"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <sql id="selectContent">
+        select content_id, type_id, content_title, content_text, create_by, create_time, update_by, update_time, remark
+        from bulletin_content
+    </sql>
+
+    <select id="selectList" parameterType="BulletinContent" resultMap="BulletinContentVOResult">
+        SELECT
+        type.type_name,
+        content.content_id,
+        content.content_text,
+        content.content_title,
+        content.create_by,
+        content.create_time,
+        content.remark,
+        content.type_id,
+        content.update_by,
+        content.update_time
+        FROM
+        bulletin_type type
+        JOIN bulletin_content content ON content.type_id = type.type_id
+        <where>
+            <if test="contentTitle != null and contentTitle != ''">
+                AND content.content_title like concat('%', #{contentTitle}, '%')
+            </if>
+            <if test="typeId != null">
+                AND content.type_id = #{typeId}
+            </if>
+        </where>
+    </select>
+
+    <insert id="add" parameterType="BulletinContent">
+            insert into bulletin_content(
+            <if test="typeId != null and typeId != 0">type_id,</if>
+            <if test="contentTitle != null and contentTitle != ''">content_title,</if>
+            <if test="contentText != null and contentText != ''">content_text,</if>
+            <if test="createBy != null and createBy != ''">create_by,</if>
+            <if test="remark != null and remark != ''">remark,</if>
+            create_time
+            )values(
+            <if test="typeId != null and typeId != 0">#{typeId},</if>
+            <if test="contentTitle != null and contentTitle != ''">#{contentTitle},</if>
+            <if test="contentText != null and contentText != ''">#{contentText},</if>
+            <if test="createBy != null and createBy != ''">#{createBy},</if>
+        <if test="remark != null and remark != ''">#{remark},</if>
+        sysdate()
+            )
+    </insert>
+
+    <select id="selectById" resultMap="BulletinContentResult" parameterType="Long">
+        select content_id, type_id, content_title, content_text, create_by, create_time, update_by, update_time, remark
+        from bulletin_content
+        where content_id = #{contentId}
+    </select>
+
+    <update id="editContent">
+        update bulletin_content
+        <set>
+            <if test="bulletinContent.typeId != null and bulletinContent.typeId != ''">type_id = #{bulletinContent.typeId},</if>
+            <if test="bulletinContent.contentTitle != null and bulletinContent.contentTitle != ''">content_title = #{bulletinContent.contentTitle},</if>
+            <if test="bulletinContent.contentText != null and bulletinContent.contentText != ''">content_text = #{bulletinContent.contentText},</if>
+            <if test="bulletinContent.remark != null">remark = #{bulletinContent.remark},</if>
+            <if test="username != null and username != ''">update_by = #{username},</if>
+            update_time = sysdate()
+        </set>
+        where content_id = #{bulletinContent.contentId}
+    </update>
+
+    <delete id="remove" parameterType="Long">
+        delete from bulletin_content where content_id in
+        <foreach collection="array" item="contentIds" open="(" separator="," close=")">
+            #{contentIds}
+        </foreach>
+    </delete>
+
+    <select id="selectCount" resultType="int">
+        select count(1)
+        from bulletin_content
+        where type_id =
+        <foreach collection="array" item="typeId" open="(" separator="," close=")">
+            #{typeId}
+        </foreach>
+    </select>
+</mapper>

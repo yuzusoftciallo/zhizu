@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.cms.content.mapper.ContentMapper">
+
+    <resultMap type="Content" id="ContentResult">
+        <id     property="contentId"     column="content_id"       />
+        <result property="typeId"        column="type_id"     />
+        <result property="contentTitle"  column="content_title"     />
+        <result property="contentText"   column="content_text"     />
+        <result property="createBy"      column="create_by"     />
+        <result property="createTime"    column="create_time"   />
+        <result property="updateBy"      column="update_by"     />
+        <result property="updateTime"    column="update_time"   />
+        <result property="remark"        column="remark"        />
+    </resultMap>
+
+    <resultMap id="ContentVoResult" type="ContentVo">
+        <id     property="contentId"     column="content_id"       />
+        <result property="typeId"        column="type_id"     />
+        <result property="typeName"      column="type_name"     />
+        <result property="contentTitle"  column="content_title"     />
+        <result property="contentText"   column="content_text"     />
+        <result property="createBy"      column="create_by"     />
+        <result property="createTime"    column="create_time"   />
+        <result property="updateBy"      column="update_by"     />
+        <result property="updateTime"    column="update_time"   />
+        <result property="remark"        column="remark"        />
+    </resultMap>
+
+    <!--
+        由于这次查询的数据是有type_name（是cms_type表中的字段），所以返回值不能使ContentResult
+        我们可以在项目中创建一个Vo（值对象），这个Vo可以理解为一次查询返回的结果
+    -->
+    <select id="selectContentList" parameterType="Content" resultMap="ContentVoResult">
+        select content_id, t1.type_id, type_name, content_title, content_text, t1.create_by, t1.create_time,  t1.remark
+        from cms_content t1 left join cms_type t2 on t1.type_id = t2.type_id
+        <where>
+            <if test="contentTitle != null and contentTitle != ''">
+                content_title like concat('%', #{contentTitle}, '%')
+            </if>
+        </where>
+    </select>
+
+    <insert id="insertContent">
+        insert into cms_content(
+        <if test="contentId != null and contentId != 0">content_id,</if>
+        <if test="typeId != null and typeId != 0">type_id,</if>
+        <if test="contentTitle != null and contentTitle != ''">content_title,</if>
+        <if test="contentText != null and contentText != ''">content_text,</if>
+        <if test="remark != null and remark != ''">remark,</if>
+        <if test="createBy != null and createBy != ''">create_by,</if>
+        create_time
+        )values(
+        <if test="contentId != null and contentId != 0">#{contentId},</if>
+        <if test="typeId != null and typeId != ''">#{typeId},</if>
+        <if test="contentTitle != null and contentTitle != ''">#{contentTitle},</if>
+        <if test="contentText != null and contentText != ''">#{contentText},</if>
+        <if test="remark != null and remark != ''">#{remark},</if>
+        <if test="createBy != null and createBy != ''">#{createBy},</if>
+        sysdate()
+        )
+    </insert>
+
+    <delete id="deleteContentByIds">
+        delete from cms_content where content_id in
+        <foreach collection="array" item="contentId" open="(" separator="," close=")">
+            #{contentId}
+        </foreach>
+    </delete>
+
+    <select id="selectContentById" resultMap="ContentResult">
+         select * from cms_content where content_id = #{contentId}
+    </select>
+    <select id="selectContentByTypeId" resultMap="ContentResult">
+        select * from cms_content where type_id = #{typeId}
+    </select>
+
+
+    <!-- <insert id="insertCmsType">
+         insert into cms_type(
+         <if test="typeId != null and typeId != 0">post_id,</if>
+         <if test="typeName != null and typeName != ''">type_name,</if>
+         <if test="typeDesc != null and typeDesc != ''">type_desc,</if>
+         <if test="typeSort != null and typeSort != ''">type_sort,</if>
+         <if test="remark != null and remark != ''">remark,</if>
+         <if test="createBy != null and createBy != ''">create_by,</if>
+         create_time
+         )values(
+         <if test="typeId != null and typeId != 0">#{typeId},</if>
+         <if test="typeName != null and typeName != ''">#{typeName},</if>
+         <if test="typeDesc != null and typeDesc != ''">#{typeDesc},</if>
+         <if test="typeSort != null and typeSort != ''">#{typeSort},</if>
+         <if test="remark != null and remark != ''">#{remark},</if>
+         <if test="createBy != null and createBy != ''">#{createBy},</if>
+         sysdate()
+         )
+     </insert>
+
+     <select id="checkTypeNameUnique" resultMap="CmsTypeResult">
+         <include refid="selectCmsTypeVo" />
+         where type_name = #{typeName}
+     </select>
+
+     <select id="selectCMSTypeById" resultMap="CmsTypeResult">
+         <include refid="selectCmsTypeVo" />
+         where type_id = #{id}
+     </select>
+
+     <update id="editCMSType" parameterType="CmsType">
+         update cms_type
+         <set>
+             <if test="typeName != null and typeName != ''">type_name = #{typeName},</if>
+             <if test="typeDesc != null and typeDesc != ''">type_desc = #{typeDesc},</if>
+             <if test="typeSort != null and typeSort != ''">type_sort = #{typeSort},</if>
+             <if test="remark != null">remark = #{remark},</if>
+             <if test="updateBy != null and updateBy != ''">update_by = #{updateBy},</if>
+             update_time = sysdate()
+         </set>
+         where type_id = #{typeId}
+     </update>
+
+     <delete id="deleteCMSTypeByIds" parameterType="Integer">
+         delete from cms_type where type_id in
+         <foreach collection="array" item="typeId" open="(" separator="," close=")">
+             #{typeId}
+         </foreach>
+     </delete>
+ -->
+</mapper>

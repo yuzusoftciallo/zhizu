@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.bulletin.type.mapper.BulletinTypeMapper">
+
+    <resultMap type="com.ruoyi.project.bulletin.type.domain.BulletinType" id="BulletinTypeResult">
+        <id property="typeId" column="type_id"/>
+        <result property="typeName" column="type_name"/>
+        <result property="typeDesc" column="type_desc"/>
+        <result property="typeSort" column="type_sort"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <sql id="selectPostVo">
+        select type_id, type_name, type_desc, type_sort, create_by, create_time, update_by, update_time , remark
+        from bulletin_type
+    </sql>
+
+    <select id="selectTypeList" resultMap="BulletinTypeResult">
+        <include refid="selectPostVo"/>
+        <if test="typeName != null and typeName != ''">
+            where bulletin_type.type_name like concat('%',#{typeName},'%')
+        </if>
+    </select>
+
+    <select id="checkPostNameUnique" resultMap="BulletinTypeResult">
+        <include refid="selectPostVo"/>
+        where type_name = #{typeName}
+    </select>
+
+    <insert id="add" parameterType="BulletinType">
+        insert into bulletin_type(
+        <if test="typeName != null and typeName != ''">type_name,</if>
+        <if test="typeDesc != null and typeDesc != ''">type_desc,</if>
+        <if test="typeSort != null and typeSort != ''">type_sort,</if>
+        <if test="createBy != null and createBy != ''">create_by,</if>
+        <if test="remark != null and remark != ''">remark,</if>
+        create_time
+        )values(
+        <if test="typeName != null and typeName != ''">#{typeName},</if>
+        <if test="typeDesc != null and typeDesc != ''">#{typeDesc},</if>
+        <if test="typeSort != null and typeSort != ''">#{typeSort},</if>
+        <if test="createBy != null and createBy != ''">#{createBy},</if>
+        <if test="remark != null and remark != ''">#{remark},</if>
+        sysdate()
+        )
+    </insert>
+
+    <select id="selectById" resultMap="BulletinTypeResult" parameterType="Long">
+        <include refid="selectPostVo"/>
+        where type_id = #{typeId}
+    </select>
+
+    <update id="edit" parameterType="BulletinType">
+        update bulletin_type
+        <set>
+            <if test="typeName != null and typeName != ''">type_name = #{typeName},</if>
+            <if test="typeDesc != null and typeDesc != ''">type_desc = #{typeDesc},</if>
+            <if test="typeSort != null and typeSort != ''">type_sort = #{typeSort},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            update_time = sysdate()
+        </set>
+        where type_id = #{typeId}
+    </update>
+
+    <delete id="remove" parameterType="Long">
+        delete from bulletin_type where type_id in
+        <foreach collection="array" item="typeId" open="(" separator="," close=")">
+            #{typeId}
+        </foreach>
+    </delete>
+</mapper>

@@ -98,6 +98,8 @@ public class BaseEntity implements Serializable
         this.remark = remark;
     }
 
+
+
     public Map<String, Object> getParams()
     {
         if (params == null)
@@ -106,6 +108,7 @@ public class BaseEntity implements Serializable
         }
         return params;
     }
+
 
     public void setParams(Map<String, Object> params)
     {
