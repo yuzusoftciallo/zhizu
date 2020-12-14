@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2eb808a-2789-4ee4-bd01-bae88b4ba351" name="Default Changelist" comment="测试添加公告类型">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-druid.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-druid.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +39,14 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="C:\Program Files\Git\bin\git.exe" />
+    <option name="PATH_TO_GIT" value="E:\Program Files\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/UserMapper.xml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/PostMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinTypeMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinContentMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/UserMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/PostMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -95,10 +96,10 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ruoyi.project.cms.content.service" />
-      <recent name="com.ruoyi.project.cms.type.mapper" />
-      <recent name="com.ruoyi.project.cms.type.domain" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\static\js" />
+      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\mybatis\system" />
+      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\mybatis\cms" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\zhizun\src\main\resources\mybatis\bulletin" />
@@ -107,10 +108,10 @@
       <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\templates\cms\type" />
       <recent name="D:\soft\idea\workspace\Ting\src\main\java\com\ruoyi" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\static\js" />
-      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\mybatis\system" />
-      <recent name="D:\高级课程资料2\07_至尊智能家居项目\第一天\源码\zhizun\src\main\resources\mybatis\cms" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ruoyi.project.cms.content.service" />
+      <recent name="com.ruoyi.project.cms.type.mapper" />
+      <recent name="com.ruoyi.project.cms.type.domain" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RuoYiApplication (1)">
@@ -217,7 +218,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试添加公告类型" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试添加公告类型" />
+    <MESSAGE value="leo测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="leo测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="0" width="753" height="728" key="#RuoYiApplication_(1)" timestamp="1607936790822">
@@ -250,10 +252,11 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1077" y="299" key="ExperimentsDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1607686211771" />
-    <state x="488" y="149" key="FileChooserDialogImpl" timestamp="1607936835387">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="514" y="188" key="FileChooserDialogImpl" timestamp="1607938796859">
+      <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="488" y="149" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607936835387" />
+    <state x="514" y="188" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1607938796859" />
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600072961661" />
     <state x="915" y="215" key="FileChooserDialogImpl/0.0.2560.1050@0.0.2560.1050" timestamp="1607932963481" />
     <state width="2507" height="185" key="GridCell.Tab.0.bottom" timestamp="1607932897373">
@@ -328,10 +331,11 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="795" y="289" key="Registry/0.0.2560.1050@0.0.2560.1050" timestamp="1607686214671" />
-    <state x="337" y="23" key="SettingsEditor" timestamp="1607937873500">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="253" y="20" key="SettingsEditor" timestamp="1607938799824">
+      <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="240" y="16" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607936836782" />
+    <state x="253" y="20" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1607938799824" />
     <state x="270" y="61" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600072964249" />
     <state x="337" y="23" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607937873500" />
     <state x="450" y="77" key="SettingsEditor/0.0.2560.1050@0.0.2560.1050" timestamp="1607932576416" />
@@ -376,9 +380,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="852" y="239" key="run.anything.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607771797166" />
-    <state x="718" y="195" width="1120" height="854" key="search.everywhere.popup" timestamp="1607873847346">
-      <screen x="0" y="0" width="2560" height="1050" />
+    <state x="404" y="171" width="672" height="749" key="search.everywhere.popup" timestamp="1607938637474">
+      <screen x="0" y="0" width="1440" height="920" />
     </state>
+    <state x="404" y="171" width="672" height="749" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1607938637474" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1600243863102" />
     <state x="718" y="195" width="1120" height="854" key="search.everywhere.popup/0.0.2560.1050@0.0.2560.1050" timestamp="1607873847346" />
     <state x="406" y="274" key="svn.repositoryBrowser" timestamp="1607932949299">
