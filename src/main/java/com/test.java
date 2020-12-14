@@ -5,5 +5,6 @@ public class test {
         System.out.println("args = " + args);
         System.out.println("args = " + args);
         System.out.println("args = " + args);
+        System.out.println("true = " + true);
     }
 }
