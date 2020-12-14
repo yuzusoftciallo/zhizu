@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2eb808a-2789-4ee4-bd01-bae88b4ba351" name="Default Changelist" comment="测试添加公告类型">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="b2eb808a-2789-4ee4-bd01-bae88b4ba351" name="Default Changelist" comment="吧吧v">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zhizu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zhizu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +39,19 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PATH_TO_GIT" value="E:\Program Files\Git\bin\git.exe" />
+    <option name="PATH_TO_GIT" value="G:\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinTypeMapper.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/PostMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/bulletin/BulletinContentMapper.xml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/UserMapper.xml" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/mybatis/system/PostMapper.xml" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../apache-maven-3.6.3" />
+        <option name="mavenHome" value="C:/../../apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -183,6 +183,7 @@
       <workItem from="1607914050027" duration="10310000" />
       <workItem from="1607932927610" duration="68000" />
       <workItem from="1607934547073" duration="893000" />
+      <workItem from="1607945837721" duration="252000" />
     </task>
     <task id="LOCAL-00001" summary="测试添加公告类型">
       <created>1607934650444</created>
@@ -202,24 +203,27 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试添加公告类型" />
     <MESSAGE value="leo测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="leo测试" />
+    <MESSAGE value="aaaaaaa" />
+    <MESSAGE value="吧吧v" />
+    <option name="LAST_COMMIT_MESSAGE" value="吧吧v" />
   </component>
   <component name="WindowStateProjectService">
     <state x="313" y="0" width="753" height="728" key="#RuoYiApplication_(1)" timestamp="1607936790822">
@@ -244,17 +248,23 @@
     </state>
     <state x="330" y="340" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1600075838356" />
     <state x="550" y="428" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1607869699144" />
-    <state x="210" y="85" key="DiffContextDialog" timestamp="1607937841136">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="223" y="0" key="CommitChangelistDialog2" timestamp="1607946071872">
+      <screen x="0" y="0" width="1280" height="770" />
     </state>
+    <state x="223" y="0" key="CommitChangelistDialog2/0.0.1280.770@0.0.1280.770" timestamp="1607946071872" />
+    <state x="140" y="63" key="DiffContextDialog" timestamp="1607946000425">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="140" y="63" key="DiffContextDialog/0.0.1280.770@0.0.1280.770" timestamp="1607946000425" />
     <state x="210" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607937841136" />
     <state x="1077" y="299" key="ExperimentsDialog" timestamp="1607686211771">
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="1077" y="299" key="ExperimentsDialog/0.0.2560.1050@0.0.2560.1050" timestamp="1607686211771" />
-    <state x="514" y="188" key="FileChooserDialogImpl" timestamp="1607938796859">
-      <screen x="0" y="0" width="1440" height="920" />
+    <state x="457" y="157" key="FileChooserDialogImpl" timestamp="1607945871338">
+      <screen x="0" y="0" width="1280" height="770" />
     </state>
+    <state x="457" y="157" key="FileChooserDialogImpl/0.0.1280.770@0.0.1280.770" timestamp="1607945871338" />
     <state x="488" y="149" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607936835387" />
     <state x="514" y="188" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1607938796859" />
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600072961661" />
@@ -331,9 +341,10 @@
       <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="795" y="289" key="Registry/0.0.2560.1050@0.0.2560.1050" timestamp="1607686214671" />
-    <state x="253" y="20" key="SettingsEditor" timestamp="1607938799824">
-      <screen x="0" y="0" width="1440" height="920" />
+    <state x="225" y="17" key="SettingsEditor" timestamp="1607945873770">
+      <screen x="0" y="0" width="1280" height="770" />
     </state>
+    <state x="225" y="17" key="SettingsEditor/0.0.1280.770@0.0.1280.770" timestamp="1607945873770" />
     <state x="240" y="16" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607936836782" />
     <state x="253" y="20" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1607938799824" />
     <state x="270" y="61" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600072964249" />
@@ -368,6 +379,10 @@
     </state>
     <state x="390" y="150" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1607936775150" />
     <state x="548" y="214" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607937827975" />
+    <state x="399" y="224" key="git4idea.ui.GitUnstashDialog" timestamp="1607946082116">
+      <screen x="0" y="0" width="1280" height="770" />
+    </state>
+    <state x="399" y="224" key="git4idea.ui.GitUnstashDialog/0.0.1280.770@0.0.1280.770" timestamp="1607946082116" />
     <state x="401" y="77" key="new project wizard" timestamp="1600673268615">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
