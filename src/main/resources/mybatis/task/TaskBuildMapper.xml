@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.project.task.taskbuild.mapper.TaskBuildMapper">
+
+    <resultMap type="com.ruoyi.project.task.taskbuild.domain.Task" id="task">
+        <result property="tId" column="t_id"/>
+        <result property="tTitle" column="t_title"/>
+        <result property="tText" column="t_text"/>
+        <result property="tStart" column="t_start"/>
+        <result property="tEnd" column="t_end"/>
+        <result property="depName" column="dep_name"/>
+        <result property="sName" column="s_name"/>
+        <result property="tStatus" column="t_status"/>
+        <result property="tAnnex" column="t_annex"/>
+        <result property="tComplete" column="t_complete"/>
+    </resultMap>
+    <resultMap type="com.ruoyi.project.task.taskbuild.domain.Level" id="level">
+        <result property="lId" column="l_id"/>
+        <result property="lType" column="l_type"/>
+        <result property="lStatusid" column="l_statusid"/>
+    </resultMap>
+
+
+
+    <sql id="selectTask">
+        select t_id, t_title, t_text, t_start, t_end, dep_name, s_name, t_status, t_annex,t_complete
+        from t_task
+    </sql>
+
+    <sql id="selectLevelList">
+
+        select l_id,l_type,l_statusid
+        from t_level
+
+    </sql>
+
+    <select id="selectTaskList" parameterType="Task" resultMap="task">
+        <include refid="selectTask"></include>
+
+        <where>
+            <if test="sName != null and sName != ''">
+                AND s_name like concat('%', #{sName}, '%')
+            </if>
+            <if test="tText != null and tText != ''" >
+                AND t_text like concat('%', #{tText}, '%')
+            </if>
+
+            <if test="tStatus != null"  >
+                 AND t_Status like concat('%', #{tStatus}, '%')
+            </if>
+
+        </where>
+    </select>
+<select id="selectLevel" resultMap="level">
+
+    <include refid="selectLevelList"></include>
+
+
+</select>
+
+</mapper>
